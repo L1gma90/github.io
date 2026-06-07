@@ -3,77 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Презентация продукта</title>
+    <title>Презентация продукта — Современная кухня</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
 
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
-
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        .container {
-            display: flex;
-            height: 100vh;
-        }
-
-        .left {
-            width: 40%;
-            padding: 60px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .right {
-            width: 60%;
-        }
-
-        h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-
-        button {
-            width: 200px;
-            padding: 15px;
-            font-size: 18px;
-            cursor: pointer;
-        }
-
-        model-viewer {
-            width: 100%;
-            height: 100%;
-            background-color: #f0f0f0; /* Добавим фон, чтобы видеть границы блока */
-        }
-    </style>
 </head>
 <body>
 
-<div class="container">
-    <div class="left">
-        <h1>Современная кухня</h1>
-        <p>
-            
-            
-        </p>
-        
-    </div>
+<main class="container">
+    <section class="left-panel">
+        <div class="content-wrapper">
+            <span class="badge">Премиум линейка</span>
+            <h1>Современная кухня</h1>
+            <p class="description">
+                Погрузитесь в детали вашего будущего интерьера. Взаимодействуйте с высокоточной 3D-моделью прямо в браузере: вращайте, приближайте и рассматривайте текстуры фасадов со всех сторон.
+            </p>
+            <button class="cta-button">Оставить заявку</button>
+        </div>
+    </section>
 
-    <div class="right">
+    <section class="right-panel">
         <model-viewer
             src="cozy-kitchen.glb"
             camera-controls
-            auto-rotate>
+            auto-rotate
+            interaction-prompt="auto"
+            shadow-intensity="1.5"
+            exposure="1.2"
+            ar>
         </model-viewer>
-    </div>
-</div>
+    </section>
+</main>
 
 </body>
 </html>
